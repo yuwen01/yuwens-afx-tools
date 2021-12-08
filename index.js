@@ -14,6 +14,7 @@ express()
         console.error(error);
         return;
       }
+      res.setHeader('content-type', 'application/json')
       res.end(data)
     })
   })
