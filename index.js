@@ -1,5 +1,6 @@
 const express = require('express')
 const fs = require('fs')
+const { resolve } = require('path')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
@@ -19,4 +20,5 @@ express()
     })
   })
   .get("/music_links/*", (req, res) => res.render('pages/index'))
+  .get("/generator", (req, res) => res.render('pages/generator'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
